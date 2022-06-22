@@ -8,7 +8,7 @@ const filename1 = "body.html";
 const filename2 = "footer.html";
 let fullData = "";
 
-http.createServer((request, response) => {// вызов метода создания http сервера
+http.createServer((request, response) => {
     fs.readFile(filename, 'utf8', (err, data) => {
         if (err) {
             console.log('Could not find or open file for reading\n');
@@ -18,7 +18,7 @@ http.createServer((request, response) => {// вызов метода созда�
             console.log(`The file ${filename} is read and sent to the client\n`);
             response.writeHead(200, { 'Content-Type': 'text/html' });
             fullData += data
-            // response.end(data);
+            
             fs.readFile(filename1, 'utf8', (err, data) => {
                 if (err) {
                     console.log('Could not find or open file for reading\n');
@@ -29,7 +29,7 @@ http.createServer((request, response) => {// вызов метода созда�
                     response.writeHead(200, { 'Content-Type': 'text/html' });
                     fullData += data
                     console.log(fullData)
-                    //response.end(data);
+                    
                     fs.readFile(filename2, 'utf8', (err, data) => {
                         if (err) {
                             console.log('Could not find or open file for reading\n');
