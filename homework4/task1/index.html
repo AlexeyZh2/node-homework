@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style/style.css" type="text/css">
+      <title>Задание 1</title>
+   </head>
+   <body>
+      <h2>Тренировочная страница!!</h2>
+      <div id="container">
+      </div>
+      <button id="add_button">Добавить фрагмент!</button>
+      <script src="./script.js" type="text/javascript"></script>
+      <!-- <script>
+         add_button.addEventListener('click', addDataOnPage)
+              function addDataOnPage (event) {
+                  event.preventDefault()
+                     fetch('http://localhost:8080/data')
+                          .then((res)=>{
+                            console.log(res.status);
+                            console.log(res.headers);
+         
+                             if(res.status == 200){
+         	                    return res.text();
+                             } else {
+         	                throw new Error('');
+                             }
+                         })
+                           .then((str_html)=>{
+                             let div = document.createElement('div');
+                             div.innerHTML = str_html;
+                            container.appendChild(div); 
+         });
+         }
+      </script> -->
+   </body>
+</html>
